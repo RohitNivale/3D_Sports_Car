@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>main page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #101820;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 25px 20px;
+    }
+    .logo {
+      height: 70px;
+      margin-right: 100px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      position: relative;
+    }
+    .nav-link:hover {
+      color: white;
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ffc400;
+      transform: scaleX(0);
+      transition: transform 0.4s ease-in-out;
+    }
+    .nav-link:hover::after {
+      transform: scaleX(1);
+    }
+    .div {
+        height: 500px;
+        width: 100%;
+        background-color: beige;
+    }
+    .social {
+      display: flex;
+      gap: 25px;
+      margin-left: 50px;
+    }
+    .social-icon {
+      color: #ffc400;
+      font-size: 23px;
+      transition: transform 0.4s ease-in-out;
+    }
+    .social-icon:hover {
+      color: white;
+      transform: translateY(-10px);
+    }
+    .lamborev {
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Car feature containers */
+    .car-feature {
+      position: absolute;
+      transform: translateY(-50%);
+      padding: 15px;
+      padding-left: 50px;
+      padding-right:50px ;
+      
+      background-color: #101820;
+      color: white;  /* Updated to white text */
+      font-size: 22px;
+      border-radius: 5px;
+      display: none;
+      
+      transition: all 0.8s ease-out;
+    }
+
+    /* Manually set feature positions for better alignment */
+    .feature-left-1 { top: 35%; left: -250px; }
+    .feature-left-2 { top: 60%; left: -250px; }
+    .feature-left-3 { top: 82%; left: -250px; }
+
+    .feature-right-1 { top: 30%; right: -250px; }
+    .feature-right-2 { top: 55%; right: -250px; }
+    .feature-right-3 { top: 80%; right: -250px; }
+
+    .one {
+        clip-path: polygon(0% 0%,80% 0%,100% 100%,0% 100%);
+    }
+    .footer {
+        height: 35px;
+        background-color: black;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        place-items: center;
+        color: beige;
+        position: fixed;
+        top: 94%;
+        z-index: 1;
+    }
+    #copy {
+        position: absolute;
+        left: 45%;
+        top: 8px;
+    }
+    .patti {
+      height: 50px;
+      width: 45%;
+      display: flex;
+      background-color: #ffc400;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      left:28% ;
+      border-radius:25px ;
+      margin-top:55px;
+      font-size: 20px;
+      border: 2px solid #101820;
+    }
+    .start2{
+      background-color: white;
+      height: 630px ;
+      border-top:2px solid black;
+      width: 100%;
+      
+    }
+    .start4{
+      background-color: white;
+      height: 630px ;
+      border-top:2px solid black;
+      width: 100%;
+      
+    }
+    .start6{
+      height: 630px ;
+      border-top:2px solid black;
+      width: 100%;
+      background-color: rgb(37, 41, 44);
+      
+      
+    }
+    .start3{
+      height: 630px ;
+      border-top:2px solid black;
+      width: 100%;
+      background-color: rgb(37, 41, 44);
+      
+    }
+    .start5{
+      background-color: white;
+      height: 630px ;
+      border-top:2px solid black;
+      width: 100%;}
+    .slide {
+      color:#101820;
+    }
+    .start {
+      height: 630px ;
+      border-top:2px solid black;
+      width: 100%;
+      background-color: rgb(37, 41, 44);
+    }
+    #glb {
+      height: 400px ;
+      width: 800px;
+      margin-top: 80px;
+      position: relative;
+    }
+    #glb4 {
+      height: 60vh ;
+      width: 800px;
+      margin-top: 80px;
+      left: 40%;
+      overflow: hidden;
+      position: relative;
+    }
+    #glb2{
+      height: 60vh ;
+      width: 800px;
+      margin-top: 80px;
+      left: 40%;
+      overflow: hidden;
+      position: relative;
+      
+    }
+    #glb3{
+      height: 400px ;
+      width: 800px;
+      margin-top: 80px;
+      position: relative;
+      
+    }
+    #glb6{
+      height: 400px ;
+      width: 800px;
+      margin-top: 80px;
+      position: relative;
+      
+    }
+    #glb5{
+      height: 60vh ;
+      width: 800px;
+      margin-top: 80px;
+      left: 40%;
+      overflow: hidden;
+      position: relative;
+      
+    }
+    #glb6{
+      height: 400px ;
+      width: 800px;
+      margin-top: 80px;
+      position: relative;
+    
+    }
+    .name {
+        font-size: 30px;
+        color: #ffc400;
+        left: 18%;
+        top: 40px;
+        position: relative;
+        font-family: "Ultra", serif;
+        font-optical-sizing: auto;
+        margin: 0px;
+        width:30% ;
+    }
+    .name2{
+        font-size: 30px;
+        color:#101820;
+        left: 60%;
+        top: 40px;
+        width:30% ;
+        position: relative;
+        font-family: "Ultra", serif;
+        font-optical-sizing: auto;
+        margin: 0px;
+    }
+    .name4{
+        font-size: 30px;
+        color:#101820;
+        left: 60%;
+        top: 40px;
+        width:30% ;
+        position: relative;
+        font-family: "Ultra", serif;
+        font-optical-sizing: auto;
+        margin: 0px;
+    }
+    .name3{
+        font-size: 30px;
+        color:#101820;
+        left: 60%;
+        top: 40px;
+        width:30% ;
+        position: relative;
+        font-family: "Ultra", serif;
+        font-optical-sizing: auto;
+        margin: 0px;
+    }
+    .specifications {
+      position: absolute;
+      right: 5%;
+      top: 105%;
+      width: 300px;
+      padding: 20px;
+      background-color: #101820;
+      /* border:2px solid white; */
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+    .specifications2 {
+      position: absolute;
+      right: 70%;
+      top: 200%;
+      width: 300px;
+      padding: 20px;
+      background-color: #101820;
+      /* border:2px solid white; */
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+    .specifications3 {
+      position: absolute;
+      right: 5%;
+      top: 297%;
+      width: 300px;
+      padding: 20px;
+      background-color: #101820;
+      /* border:2px solid white; */
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+    .specifications4 {
+      position: absolute;
+      left: 5%;
+      top: 595%;
+      width: 300px;
+      padding: 20px;
+      background-color: #101820;
+      /* border:2px solid white; */
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    
+    }
+    .specifications6 {
+      position: absolute;
+      right: 5%;
+      top: 495%;
+      width: 300px;
+      padding: 20px;
+      background-color: #101820;
+      /* border:2px solid white; */
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+    .specifications5 {
+      position: absolute;
+      left: 5%;
+      top: 395%;
+      width: 300px;
+      padding: 20px;
+      background-color: #101820;
+      /* border:2px solid white; */
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+
+
+
+    .specifications h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #ffc400;
+       
+    }
+    .specifications2 h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #ffc400;
+       
+    }
+    .specifications3 h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #ffc400;
+       
+    }
+    .specifications5 h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #ffc400;
+       
+    }
+    .specifications4 h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #ffc400;
+       
+    }
+    .specifications6 h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #ffc400;
+       
+    }
+    .spec-item {
+        padding: 8px 0;
+        border-bottom: 1px solid #ffc400;
+    }
+
+    .spec-item:last-child {
+        border-bottom: none;
+    }
+
+    .price-range {
+      position: absolute;
+      top: 163%;
+      right: 5%;
+      width: 450px;
+      padding: 11px;
+      background-color: #101820;
+      color: white;
+      font-size: 18px;
+     
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+    .price-range2{
+      position: absolute;
+      top: 257%;
+      left: 4%;
+      width: 450px;
+      padding: 11px;
+      background-color: #101820;
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+    .price-range4{
+      position: absolute;
+      top: 655%;
+      left: 4%;
+      width: 450px;
+      padding: 11px;
+      background-color: #101820;
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+    .price-range3{
+      position: absolute;
+      top: 355%;
+      right: 5%;
+      width: 450px;
+      padding: 11px;
+      background-color: #101820;
+      color: white;
+      font-size: 18px;
+     
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+    .price-range5{
+      position: absolute;
+      top: 455%;
+      left: 5%;
+      width: 450px;
+      padding: 11px;
+      background-color: #101820;
+      color: white;
+      font-size: 18px;
+     
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+    .price-range6{
+      position: absolute;
+      top: 555%;
+      right: 5%;
+      width: 450px;
+      padding: 11px;
+      background-color: #101820;
+      color: white;
+      font-size: 18px;
+     
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .price-range h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #ffc400;
+    }
+    .price-range2 h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #ffc400;
+    }
+    .price-range3 h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #ffc400;
+    }
+    .price-range4 h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #ffc400;
+    }
+
+    .price-range5 h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #ffc400;
+    }
+    .price-range6 h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #ffc400;
+    }
+
+
+
+
+    .price-item {
+        padding: 8px 0;
+        border-bottom: 1px solid #ffc400;
+    }
+
+    .price-item:last-child {
+        border-bottom: none;
+    }
+
+    .div3 {
+      background-color: #ffc400;
+      border-radius: 25px;
+      font-size: larger;
+      text-align: center;
+      cursor: pointer;
+      position: absolute;
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      align-items: center;
+      left: 18%;
+      border: 2px solid black;
+    }
+    .div10{
+      background-color: #ffc400;
+      border-radius: 25px;
+      font-size: larger;
+      text-align: center;
+      cursor: pointer;
+      position: absolute;
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      align-items: center;
+      left: 22%;
+      border: 2px solid black;
+    }
+    .div9{
+      background-color: #ffc400;
+      border-radius: 25px;
+      font-size: larger;
+      text-align: center;
+      cursor: pointer;
+      position: absolute;
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      align-items: center;
+      left: 22%;
+      border: 2px solid black;
+    }
+    .div8{
+      background-color: #ffc400;
+      border-radius: 25px;
+      font-size: larger;
+      text-align: center;
+      cursor: pointer;
+      position: absolute;
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      align-items: center;
+      left: 18%;
+      border: 2px solid black;
+    }
+    .div7{
+      background-color: #ffc400;
+      border-radius: 25px;
+      font-size: larger;
+      text-align: center;
+      cursor: pointer;
+      position: absolute;
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      align-items: center;
+      left: 18%;
+      border: 2px solid black;
+    }
+    .div5{
+      background-color: #ffc400;
+      border-radius: 25px;
+      font-size: larger;
+      text-align: center;
+      cursor: pointer;
+      position: absolute;
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      align-items: center;
+       right: 20%;
+      border: 2px solid black;
+    }
+    
+
+
+
+    .slide2 {
+      margin-top: 12px;
+    }
+    .div4 {
+      background-color: #ffc400;
+      border-radius: 25px;
+      font-size: larger;
+      text-align: center;
+      cursor: pointer;
+      position: absolute;
+      left: 18%;
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      align-items: center;
+      border: 2px solid black;
+      display: none;
+    }
+    .div12{
+      background-color: #ffc400;
+      border-radius: 25px;
+      font-size: larger;
+      text-align: center;
+      cursor: pointer;
+      position: absolute;
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      align-items: center;
+       right: 20%;
+      border: 2px solid black;
+    }
+    .div11{
+      background-color: #ffc400;
+      border-radius: 25px;
+      font-size: larger;
+      text-align: center;
+      cursor: pointer;
+      position: absolute;
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      align-items: center;
+       right: 20%;
+      border: 2px solid black;
+    }
+    .div14{
+      background-color: #ffc400;
+      border-radius: 25px;
+      font-size: larger;
+      text-align: center;
+      cursor: pointer;
+      position: absolute;
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      align-items: center;
+       right: 20%;
+      border: 2px solid black;
+    }
+    .div13{
+      background-color: #ffc400;
+      border-radius: 25px;
+      font-size: larger;
+      text-align: center;
+      cursor: pointer;
+      position: absolute;
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      align-items: center;
+       right: 20%;
+      border: 2px solid black;
+    }
+    .div6{
+      background-color: #ffc400;
+      border-radius: 25px;
+      font-size: larger;
+      text-align: center;
+      cursor: pointer;
+      position: absolute;
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      align-items: center;
+      right: 20%;
+      border: 2px solid black;
+      display: none;
+    }
+   
+    .slide3 {
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="div">
+    <img src="enhanced_image (2).png" alt="Logo" class="logo">
+    <div class="nav-links">
+      <a href="#div" class="nav-link">START</a>
+      <a href="#start2" class="nav-link">ICONIC</a>
+      <a href="#start5" class="nav-link">MYTHICAL</a>
+      <a href="#start" class="nav-link"> ULTIMATE LUXURY</a>
+      <a href="#start6" class="nav-link">MODERN MASTERPIECE</a>
+    </div>
+    <div class="social">
+      <a href="#" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/rohit_nivale" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/rohit_nivale" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/Rohit_Nivale?t=vcDBZg70kqqIk6LEHbSl-A&s=09" class="social-icon"><i class="fab fa-twitter"></i></a>
+    </div>
+  </nav>
+  
+  <div class="patti">
+    <div class="slide">LAMBORGHINI REVELTO</div>
+  </div>
+
+  <!-- Car model viewer -->
+  <div class="div" >
+    <model-viewer class="lamborev" id="model" src="free_lamborghini_revuelto.glb" autoplay alt="A 3D model" auto-rotate shadow-intensity="7" shadow-softness="1.1"> </model-viewer>
+  </div>
+
+  <!-- Car features to slide in -->
+  <a href="#start3"><div id="left-feature-1" class="car-feature feature-left-1" style="clip-path:polygon(0% 0%,90% 0%,100% 50%,90% 100%,10% 100%,0% 100%);">Mercedes slr mclaren</div></a>
+  <div id="right-feature-1" class="car-feature feature-right-1" style="clip-path:polygon(10% 0%,100% 0%,100% 100%,90% 100%,10% 100%,0% 50%);">Rolls-Royce Ghost</div>
+
+  <div id="left-feature-2" class="car-feature feature-left-2" style="clip-path:polygon(0% 0%,90% 0%,100% 50%,90% 100%,10% 100%,0% 100%);">
+    Rolls-Royce Ghost</div>
+  <div id="right-feature-2" class="car-feature feature-right-2" style="clip-path:polygon(10% 0%,100% 0%,100% 100%,90% 100%,10% 100%,0% 50%);"> Porsche Carrera</div>
+
+  <div id="left-feature-3" class="car-feature feature-left-3" style="clip-path:polygon(0% 0%,90% 0%,100% 50%,90% 100%,10% 100%,0% 100%);">  Toyota gr supra Racing's GR</div>
+  <div id="right-feature-3" class="car-feature feature-right-3" style="clip-path:polygon(10% 0%,100% 0%,100% 100%,90% 100%,10% 100%,0% 50%);">Bugatti La Voiture Noire</div>
+
+  <div class="start" id="start">
+    <div class="name">ROLLS-ROYCE GHOST</div>
+    <div class="model">
+      <model-viewer id="glb" src="rolls-royce_ghost.glb"
+       alt="A 3D model of Rolls-Royce Ghost" 
+       camera-controls
+        shadow-intensity="1"
+         shadow-softness="0.8"
+          zoom="15" 
+          camera-orbit="280deg 90deg 3.5m" 
+          exposure="1.5">
+      </model-viewer>
+    </div>
+
+    <div class="div3">
+      <div class="slide2">Auto Explore</div>
+    </div>
+    <div class="div4">
+      <div class="slide3" > Explore</div>
+    </div>
+
+    <div class="specifications">
+      <h2>Rolls-Royce Ghost Specs & Features</h2>
+      <div class="spec-item"><strong>Engine:</strong> 6750 cc</div>
+      <div class="spec-item"><strong>Power:</strong> 563 bhp</div>
+      <div class="spec-item"><strong>Torque:</strong> 820 Nm</div>
+      <div class="spec-item"><strong>Top Speed:</strong> 250 km/h</div>
+      <div class="spec-item"><strong>Transmission:</strong> Automatic</div>
+      <div class="spec-item"><strong>Drive Type:</strong> AWD</div>
+    </div>
+
+    <div class="price-range">
+      <h2>Price Range</h2>
+      <div class="price-item"></div>
+      <div class="price-item"><strong>Base Model:</strong>₹6,95,00,000</div>
+      <div class="price-item"><strong>Fully Loaded:</strong>₹7,95,00,000</div>
+      <div class="price-item"></div>
+    </div>
+  </div>
+   <div class="start2" id="start2">
+    <div class="name2">PORSCHE CARRERA</div>
+    <div class="model">
+      <model-viewer id="glb2"
+      
+      src="free_porsche_911_carrera_4s.glb"
+       alt="A 3D model of Porschepanamera"
+       camera-controls
+        shadow-intensity="1"
+         shadow-softness="0.8"
+          zoom="20"
+          camera-orbit="280deg 90deg 3.5m"
+          exposure="1.5">
+      </model-viewer>
+    </div>
+
+    <div class="div5">
+      <div class="slide2">Auto Explore</div>
+    </div>
+    <div class="div6">
+      <div class="slide3" > Explore</div>
+    </div>
+
+    <div class="specifications2">
+      <h2>Posrche Careera Specs & Features</h2>
+      <div class="spec-item"><strong>Engine:</strong> 3.0L twin-turbocharged</div>
+      <div class="spec-item"><strong>Power:</strong> 394 PS</div>
+      <div class="spec-item"><strong>Torque:</strong> 450Nm</div>
+      <div class="spec-item"><strong>Top Speed:</strong> 183 mph (295 km/h)</div>
+      <div class="spec-item"><strong>Transmission:</strong> Automatic</div>
+      <div class="spec-item"><strong>Drive Type:</strong> RWD</div>
+    </div>
+
+    <div class="price-range2">
+      <h2>Price Range</h2>
+      <div class="price-item"></div>
+      <div class="price-item"><strong>Base Model:</strong>₹1.99 Cr</div>
+      <div class="price-item"><strong>Fully Loaded:</strong>₹2.44 Cr</div>
+      <div class="price-item"></div>
+    </div>
+  </div>
+  <div class="start3" id="start3">
+    <div class="name">Mercedes slr mclaren</div>
+    <div class="model">
+      <model-viewer id="glb3" src="mercedes-benz_slr_mclaren.glb"
+       alt="A 3D model of Rolls-Royce Ghost" 
+       camera-controls
+        shadow-intensity="1"
+         shadow-softness="0.8"
+          zoom="15" 
+          camera-orbit="280deg 90deg 3.5m" 
+          exposure="1.5">
+      </model-viewer>
+    </div>
+
+    <div class="div10">
+      <div class="slide2"> Explore</div>
+    </div>
+    <div class="div9">
+      <div class="slide3" >Auto Explore</div>
+    </div>
+
+    <div class="specifications3">
+      <h2>Mercedes slr mclaren Specs & Features</h2>
+      <div class="spec-item"><strong>Engine:</strong>  5.439L supercharged V8</div>
+      <div class="spec-item"><strong>Power:</strong>626 PS</div>
+      <div class="spec-item"><strong>Torque:</strong> 780 Nm</div>
+      <div class="spec-item"><strong>Top Speed:</strong> (334 km/h)</div>
+      <div class="spec-item"><strong>Transmission:</strong> 5-speed automatic</div>
+      <div class="spec-item"><strong>Drive Type:</strong>RWD</div>
+    </div>
+
+    <div class="price-range3">
+      <h2>Price Range</h2>
+      <div class="price-item"></div>
+      <div class="price-item"><strong>Base Model:</strong>₹6-9 Cr</div>
+      <div class="price-item"><strong>Fully Loaded:</strong>₹15-35+ Cr</div>
+      <div class="price-item"></div>
+    </div>
+  </div>
+ 
+   <div class="start5" id="start5">
+    <div class="name2">TOYOTA GR SUPRA</div>
+    <div class="model">
+      <model-viewer id="glb5"
+      
+      src="toyota_gr_supra.glb"
+       alt="A 3D model of Porschepanamera"
+       camera-controls
+        shadow-intensity="1"
+         shadow-softness="0.8"
+          zoom="20"
+          camera-orbit="280deg 90deg 3.5m"
+          exposure="1.5">
+      </model-viewer>
+    </div>
+
+    <div class="div14">
+      <div class="slide2">Explore</div>
+    </div>
+    <div class="div13">
+      <div class="slide3">Auto Explore</div>
+    </div>
+
+    <div class="specifications5">
+      <h2>Toyota gr supra Specs & Features</h2>
+      <div class="spec-item"><strong>Engine:</strong> 3.0L turbocharged inline-4</div>
+      <div class="spec-item"><strong>Power:</strong> 382hp</div>
+      <div class="spec-item"><strong>Torque:</strong>500 Nm</div>
+      <div class="spec-item"><strong>Top Speed:</strong> 250 km/h</div>
+      <div class="spec-item"><strong>Transmission:</strong> Automatic</div>
+      <div class="spec-item"><strong>Drive Type:</strong> RWD</div>
+    </div>
+
+    <div class="price-range5">
+      <h2>Price Range</h2>
+      <div class="price-item"></div>
+      <div class="price-item"><strong>Base Model:</strong>₹1.05Cr</div>
+      <div class="price-item"><strong>Fully Loaded:</strong> ₹1.30Cr</div>
+      <div class="price-item"></div>
+    </div>
+  </div>
+  <div class="start6" id="start6">
+    <div class="name">Bugatti La Voiture Noire</div>
+    <div class="model">
+      <model-viewer id="glb6" src="bugatti_-_la_voiture_noire.glb"
+       alt="A 3D model of Rolls-Royce Ghost" 
+       camera-controls
+        shadow-intensity="1"
+         shadow-softness="0.8"
+          zoom="15" 
+          camera-orbit="280deg 90deg 3.5m" 
+          exposure="1.5">
+      </model-viewer>
+    </div>
+
+    <div class="div8">
+      <div class="slide2"> Explore</div>
+    </div>
+    <div class="div7">
+      <div class="slide3" > Auto Explore</div>
+    </div>
+
+    <div class="specifications6">
+      <h2>Bugatti La Voiture Noire Specs & Features</h2>
+      <div class="spec-item"><strong>Engine:</strong> 8.0L quad-turbocharged</div>
+      <div class="spec-item"><strong>Power:</strong> 1,500 PS</div>
+      <div class="spec-item"><strong>Torque:</strong>1600 NM</div>
+      <div class="spec-item"><strong>Top Speed:</strong> 420 km/h</div>
+      <div class="spec-item"><strong>Transmission:</strong>dual-clutch Automatic</div>
+      <div class="spec-item"><strong>Drive Type:</strong> AWD</div>
+    </div>
+
+    <div class="price-range6">
+      <h2>Price Range</h2>
+      <div class="price-item"></div>
+      <div class="price-item"><strong>Base Model:</strong>₹131 Cr</div>
+      <div class="price-item"><strong>Fully Loaded:</strong>₹132 Cr</div>
+      <div class="price-item"></div>
+    </div>
+  </div>
+  <div class="start4">
+    <div class="name4">LAMBORGHINI HURACAN</div>
+    <div class="model">
+      <model-viewer id="glb4" src="huracan_falcontm.glb"
+       alt="A 3D model of Rolls-Royce Ghost" 
+       camera-controls
+        shadow-intensity="1"
+         shadow-softness="0.8"
+          zoom="15" 
+          camera-orbit="280deg 90deg 3.5m" 
+          exposure="1.5">
+      </model-viewer>
+    </div>
+
+    <div class="div12">
+      <div class="slide2"> Explore</div>
+    </div>
+    <div class="div11">
+      <div class="slide3" >Auto Explore</div>
+    </div>
+
+    <div class="specifications4">
+      <h2>lamborghini huracan Specs & Features</h2>
+      <div class="spec-item"><strong>Engine:</strong> 5.2L naturally V10</div>
+      <div class="spec-item"><strong>Power:</strong> 610-640hp</div>
+      <div class="spec-item"><strong>Torque:</strong> 560-600 Nm </div>
+      <div class="spec-item"><strong>Top Speed:</strong> 325 km/h</div>
+      <div class="spec-item"><strong>Transmission:</strong> Automatic</div>
+      <div class="spec-item"><strong>Drive Type:</strong> RWD or AWD</div>
+    </div>
+
+    <div class="price-range4">
+      <h2>Price Range</h2>
+      <div class="price-item"></div>
+      <div class="price-item"><strong>Base Model:</strong>₹2.99 Cr </div>
+      <div class="price-item"><strong>Fully Loaded:</strong>₹4.61 Cr</div>
+      <div class="price-item"></div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <i class="fa-regular fa-copyright" id="copy">Copyright 2025</i> 
+  </div>
+
+ 
+
+  
+    <script>
+  // Wait for the page to load and then trigger the sliding effect after a delay
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      // Make the features visible
+      document.getElementById('left-feature-1').style.display = 'block';
+      document.getElementById('right-feature-1').style.display = 'block';
+
+      document.getElementById('left-feature-2').style.display = 'block';
+      document.getElementById('right-feature-2').style.display = 'block';
+
+      document.getElementById('left-feature-3').style.display = 'block';
+      document.getElementById('right-feature-3').style.display = 'block';
+
+      // Slide in the features from alternating sides
+      document.getElementById('left-feature-1').style.left = '0px';
+      document.getElementById('right-feature-1').style.right = '0px';
+
+      document.getElementById('left-feature-2').style.left = '0px';
+      document.getElementById('right-feature-2').style.right = '0px';
+
+      document.getElementById('left-feature-3').style.left = '0px';
+      document.getElementById('right-feature-3').style.right = '0px';
+    }, 3000); // 3 seconds delay before sliding in the features
+  });
+
+  // Adjust model viewer speed
+  const modelViewer = document.getElementById('model');
+  modelViewer.autoRotateSpeed = 400 * 10; // Increased speed by a factor of 10 (4000)
+
+
+
+
+  // Add event listener to the "Auto Explore" button
+  document.querySelector('.div3').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb');
+
+    // Enable auto-rotate on the model
+    glbModelViewer.setAttribute('auto-rotate', '');
+
+    // Disable camera controls on the model
+    glbModelViewer.removeAttribute('camera-controls');
+
+    // Hide .div3 and show .div4
+    document.querySelector('.div3').style.display = 'none';
+    document.querySelector('.div4').style.display = 'block';
+  });
+
+  // Add event listener to the "Explore" button (div4)
+  document.querySelector('.div4').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb');
+
+    // Disable auto-rotate on the model
+    glbModelViewer.removeAttribute('auto-rotate');
+
+    // Enable camera controls on the model
+    glbModelViewer.setAttribute('camera-controls', '');
+
+    // Hide .div4 and show .div3 again (optional, depending on your design)
+    document.querySelector('.div4').style.display = 'none';
+    document.querySelector('.div3').style.display = 'block';
+  });
+  // Add event listener to the "Auto Explore" button (div3)
+document.querySelector('.div3').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb');
+
+    // Enable auto-rotate on the model
+    glbModelViewer.setAttribute('auto-rotate', '');
+
+    // Disable camera controls on the model
+    glbModelViewer.removeAttribute('camera-controls');
+
+    // Hide .div3 and show .div4
+    document.querySelector('.div3').style.display = 'none';
+    document.querySelector('.div4').style.display = 'block';
+});
+
+// Add event listener to the "Explore" button (div4) for Rolls-Royce model
+document.querySelector('.div4').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb');
+
+    // Disable auto-rotate on the model
+    glbModelViewer.removeAttribute('auto-rotate');
+
+    // Enable camera controls on the model
+    glbModelViewer.setAttribute('camera-controls', '');
+
+    // Hide .div4 and show .div3 again (optional, depending on your design)
+    document.querySelector('.div4').style.display = 'none';
+    document.querySelector('.div3').style.display = 'block';
+});
+
+
+//for div 9 and 10
+
+
+
+// Add event listener to the "Auto Explore" button
+document.querySelector('.div9').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb3');
+
+    // Enable auto-rotate on the model
+    glbModelViewer.setAttribute('auto-rotate', '');
+
+    // Disable camera controls on the model
+    glbModelViewer.removeAttribute('camera-controls');
+
+    // Hide .div3 and show .div4
+    document.querySelector('.div9').style.display = 'none';
+    document.querySelector('.div10').style.display = 'block';
+  });
+
+  // Add event listener to the "Explore" button (div4)
+  document.querySelector('.div10').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb3');
+
+    // Disable auto-rotate on the model
+    glbModelViewer.removeAttribute('auto-rotate');
+
+    // Enable camera controls on the model
+    glbModelViewer.setAttribute('camera-controls', '');
+
+    // Hide .div4 and show .div3 again (optional, depending on your design)
+    document.querySelector('.div10').style.display = 'none';
+    document.querySelector('.div9').style.display = 'block';
+  });
+  // Add event listener to the "Auto Explore" button (div3)
+document.querySelector('.div9').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb3');
+
+    // Enable auto-rotate on the model
+    glbModelViewer.setAttribute('auto-rotate', '');
+
+    // Disable camera controls on the model
+    glbModelViewer.removeAttribute('camera-controls');
+
+    // Hide .div3 and show .div4
+    document.querySelector('.div9').style.display = 'none';
+    document.querySelector('.div10').style.display = 'block';
+});
+
+// Add event listener to the "Explore" button (div4) for Rolls-Royce model
+document.querySelector('.div10').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb3');
+
+    // Disable auto-rotate on the model
+    glbModelViewer.removeAttribute('auto-rotate');
+
+    // Enable camera controls on the model
+    glbModelViewer.setAttribute('camera-controls', '');
+
+    // Hide .div4 and show .div3 again (optional, depending on your design)
+    document.querySelector('.div10').style.display = 'none';
+    document.querySelector('.div9').style.display = 'block';
+});
+
+
+
+
+
+
+
+document.querySelector('.div13').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb5');
+
+    // Enable auto-rotate on the model
+    glbModelViewer.setAttribute('auto-rotate', '');
+
+    // Disable camera controls on the model
+    glbModelViewer.removeAttribute('camera-controls');
+
+    // Hide .div3 and show .div4
+    document.querySelector('.div13').style.display = 'block';
+    document.querySelector('.div14').style.display = 'none';
+  });
+
+  // Add event listener to the "Explore" button (div4)
+  document.querySelector('.div14').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb5');
+
+    // Disable auto-rotate on the model
+    glbModelViewer.removeAttribute('auto-rotate');
+
+    // Enable camera controls on the model
+    glbModelViewer.setAttribute('camera-controls', '');
+
+    // Hide .div4 and show .div3 again (optional, depending on your design)
+    document.querySelector('.div14').style.display = 'block';
+    document.querySelector('.div13').style.display = 'none';
+  });
+  // Add event listener to the "Auto Explore" button (div3)
+document.querySelector('.div13').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb5');
+
+    // Enable auto-rotate on the model
+    glbModelViewer.setAttribute('auto-rotate', '');
+
+    // Disable camera controls on the model
+    glbModelViewer.removeAttribute('camera-controls');
+
+    // Hide .div3 and show .div4
+    document.querySelector('.div13').style.display = 'none';
+    document.querySelector('.div14').style.display = 'block';
+});
+
+// Add event listener to the "Explore" button (div4) for Rolls-Royce model
+document.querySelector('.div14').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb5');
+
+    // Disable auto-rotate on the model
+    glbModelViewer.removeAttribute('auto-rotate');
+
+    // Enable camera controls on the model
+    glbModelViewer.setAttribute('camera-controls', '');
+
+    // Hide .div4 and show .div3 again (optional, depending on your design)
+    document.querySelector('.div14').style.display = 'none';
+    document.querySelector('.div13').style.display = 'block';
+});
+</script>
+<script>
+   document.querySelector('.div5').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb2');
+
+    // Enable auto-rotate on the model
+    glbModelViewer.setAttribute('auto-rotate', '');
+
+    // Disable camera controls on the model
+    glbModelViewer.removeAttribute('camera-controls');
+
+    // Hide .div3 and show .div4
+    document.querySelector('.div5').style.display = 'none';
+    document.querySelector('.div6').style.display = 'block';
+  });
+  document.querySelector('.div6').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb2');
+
+    // Disable auto-rotate on the model
+    glbModelViewer.removeAttribute('auto-rotate');
+
+    // Enable camera controls on the model
+    glbModelViewer.setAttribute('camera-controls', '');
+
+    // Hide .div4 and show .div3 again (optional, depending on your design)
+    document.querySelector('.div6').style.display = 'none';
+    document.querySelector('.div5').style.display = 'block';
+  });
+  // Add event listener to the "Auto Explore" button (div3)
+document.querySelector('.div5').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb2');
+
+    // Enable auto-rotate on the model
+    glbModelViewer.setAttribute('auto-rotate', '');
+
+    // Disable camera controls on the model
+    glbModelViewer.removeAttribute('camera-controls');
+
+    // Hide .div3 and show .div4
+    document.querySelector('.div5').style.display = 'none';
+    document.querySelector('.div6').style.display = 'block';
+});
+
+// Add event listener to the "Explore" button (div4) for Rolls-Royce model
+document.querySelector('.div6').addEventListener('click', () => {
+    const glbModelViewer = document.getElementById('glb2');
+
+    // Disable auto-rotate on the model
+    glbModelViewer.removeAttribute('auto-rotate');
+
+    // Enable camera controls on the model
+    glbModelViewer.setAttribute('camera-controls', '');
+
+    // Hide .div4 and show .div3 again (optional, depending on your design)
+    document.querySelector('.div6').style.display = 'none';
+    document.querySelector('.div5').style.display = 'block';
+});
+
+
+document.querySelector('.div7').addEventListener('click', () => {
+  const glbModelViewer = document.getElementById('glb6');
+
+  // Enable auto-rotate on the model
+  glbModelViewer.setAttribute('auto-rotate', '');
+
+  // Disable camera controls on the model
+  glbModelViewer.removeAttribute('camera-controls');
+
+  // Hide .div3 and show .div4
+  document.querySelector('.div7').style.display = 'none';
+  document.querySelector('.div8').style.display = 'block';
+});
+document.querySelector('.div8').addEventListener('click', () => {
+  const glbModelViewer = document.getElementById('glb6');
+
+  // Disable auto-rotate on the model
+  glbModelViewer.removeAttribute('auto-rotate');
+
+  // Enable camera controls on the model
+  glbModelViewer.setAttribute('camera-controls', '');
+
+  // Hide .div4 and show .div3 again (optional, depending on your design)
+  document.querySelector('.div8').style.display = 'none';
+  document.querySelector('.div7').style.display = 'block';
+});
+// Add event listener to the "Auto Explore" button (div3)
+document.querySelector('.div7').addEventListener('click', () => {
+  const glbModelViewer = document.getElementById('glb6');
+
+  // Enable auto-rotate on the model
+  glbModelViewer.setAttribute('auto-rotate', '');
+
+  // Disable camera controls on the model
+  glbModelViewer.removeAttribute('camera-controls');
+
+  // Hide .div3 and show .div4
+  document.querySelector('.div7').style.display = 'none';
+  document.querySelector('.div8').style.display = 'block';
+});
+
+// Add event listener to the "Explore" button (div4) for Rolls-Royce model
+document.querySelector('.div8').addEventListener('click', () => {
+  const glbModelViewer = document.getElementById('glb6');
+
+  // Disable auto-rotate on the model
+  glbModelViewer.removeAttribute('auto-rotate');
+
+  // Enable camera controls on the model
+  glbModelViewer.setAttribute('camera-controls', '');
+
+  // Hide .div4 and show .div3 again (optional, depending on your design)
+  document.querySelector('.div8').style.display = 'none';
+  document.querySelector('.div7').style.display = 'block';
+});
+
+document.querySelector('.div11').addEventListener('click', () => {
+  const glbModelViewer = document.getElementById('glb4');
+
+  // Enable auto-rotate on the model
+  glbModelViewer.setAttribute('auto-rotate', '');
+
+  // Disable camera controls on the model
+  glbModelViewer.removeAttribute('camera-controls');
+
+  // Hide .div3 and show .div4
+  document.querySelector('.div11').style.display = 'none';
+  document.querySelector('.div12').style.display = 'block';
+});
+document.querySelector('.div12').addEventListener('click', () => {
+  const glbModelViewer = document.getElementById('glb4');
+
+  // Disable auto-rotate on the model
+  glbModelViewer.removeAttribute('auto-rotate');
+
+  // Enable camera controls on the model
+  glbModelViewer.setAttribute('camera-controls', '');
+
+  // Hide .div4 and show .div3 again (optional, depending on your design)
+  document.querySelector('.div12').style.display = 'none';
+  document.querySelector('.div11').style.display = 'block';
+});
+// Add event listener to the "Auto Explore" button (div3)
+document.querySelector('.div11').addEventListener('click', () => {
+  const glbModelViewer = document.getElementById('glb4');
+
+  // Enable auto-rotate on the model
+  glbModelViewer.setAttribute('auto-rotate', '');
+
+  // Disable camera controls on the model
+  glbModelViewer.removeAttribute('camera-controls');
+
+  // Hide .div3 and show .div4
+  document.querySelector('.div11').style.display = 'none';
+  document.querySelector('.div12').style.display = 'block';
+});
+
+// Add event listener to the "Explore" button (div4) for Rolls-Royce model
+document.querySelector('.div12').addEventListener('click', () => {
+  const glbModelViewer = document.getElementById('glb4');
+
+  // Disable auto-rotate on the model
+  glbModelViewer.removeAttribute('auto-rotate');
+
+  // Enable camera controls on the model
+  glbModelViewer.setAttribute('camera-controls', '');
+
+  // Hide .div4 and show .div3 again (optional, depending on your design)
+  document.querySelector('.div12').style.display = 'none';
+  document.querySelector('.div11').style.display = 'block';
+});
+
+
+
+document.querySelector('.div11').addEventListener('click', () => {
+  const glbModelViewer = document.getElementById('glb4');
+
+  // Enable auto-rotate on the model
+  glbModelViewer.setAttribute('auto-rotate', '');
+
+  // Disable camera controls on the model
+  glbModelViewer.removeAttribute('camera-controls');
+
+  // Hide .div3 and show .div4
+  document.querySelector('.div11').style.display = 'none';
+  document.querySelector('.div12').style.display = 'block';
+});
+
+
+</script>
+
+   
+   <script>
+    // Wait for the page to load and then trigger the sliding effect after a delay
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    // Make the features visible
+    document.getElementById('left-feature-1').style.display = 'block';
+    document.getElementById('right-feature-1').style.display = 'block';
+
+    document.getElementById('left-feature-2').style.display = 'block';
+    document.getElementById('right-feature-2').style.display = 'block';
+
+    document.getElementById('left-feature-3').style.display = 'block';
+    document.getElementById('right-feature-3').style.display = 'block';
+
+    // Slide in the features from alternating sides
+    document.getElementById('left-feature-1').style.left = '0px';
+    document.getElementById('right-feature-1').style.right = '0px';
+
+    document.getElementById('left-feature-2').style.left = '0px';
+    document.getElementById('right-feature-2').style.right = '0px';
+
+    document.getElementById('left-feature-3').style.left = '0px';
+    document.getElementById('right-feature-3').style.right = '0px';
+  }, 3000); // 3 seconds delay before sliding in the features
+});
+
+// Adjust model viewer speed
+const modelViewer = document.getElementById('model');
+modelViewer.autoRotateSpeed = 400 * 10; // Increased speed by a factor of 10 (4000)
+
+// Add event listener to the "Auto Explore" button
+document.querySelector('.div3').addEventListener('click', () => {
+  const glbModelViewer = document.getElementById('glb');
+
+  // Enable auto-rotate on the model
+  glbModelViewer.setAttribute('auto-rotate', '');
+
+  // Disable camera controls on the model
+  glbModelViewer.removeAttribute('camera-controls');
+
+  // Hide .div3 and show .div4
+  document.querySelector('.div3').style.display = 'none';
+  document.querySelector('.div4').style.display = 'block';
+});
+
+  </script> 
+  
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</body>
+</html>
